@@ -1,0 +1,145 @@
+.shippingPage {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 10px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero p {
+  color: #888;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+}
+
+.section {
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+.section:nth-child(4) { animation-delay: 0.6s; }
+
+.section h2 {
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: #555;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #222;
+  padding-bottom: 1rem;
+}
+
+.content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 850px;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stepCard {
+  background: #0a0a0a;
+  padding: 2.5rem;
+  border: 1px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+  border-color: #333;
+  background: #111;
+}
+
+.stepNumber {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.stepCard h3 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.stepCard p {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.paymentList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.paymentItem {
+  background: #111;
+  padding: 1.5rem 2rem;
+  border: 1px solid #222;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.paymentItem h4 {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.paymentItem p {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.highlight {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.importantNote {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-left: 3px solid #444;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+  }
+}

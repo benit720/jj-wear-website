@@ -1,0 +1,137 @@
+.container {
+  color: white;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #222;
+  padding-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.addBtn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.privateForm {
+  background: #111;
+  padding: 2rem;
+  border: 1px solid #222;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.privateForm select, .privateForm input {
+  background: #000;
+  border: 1px solid #333;
+  color: white;
+  padding: 0.8rem;
+  flex: 1;
+}
+
+.privateForm button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.privateForm button:hover {
+  background: #444;
+}
+
+.statsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  padding: 1.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.historySection h3 {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 2px solid #222;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.table td {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid #111;
+  color: #aaa;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .privateForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}

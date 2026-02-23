@@ -1,0 +1,189 @@
+.checkoutPage {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.formSection h2, .summarySection h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.paymentTitle {
+  margin-top: 3rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: white;
+}
+
+.paymentTabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.paymentTabs button {
+  flex: 1;
+  padding: 1rem;
+  background: #111;
+  border: 1px solid #333;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.paymentTabs .activeTab {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+.mobileForm p {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.ussdInfo {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  border-left: 3px solid #ffcc00; /* MTN Yellow */
+}
+
+.lumicashInfo {
+  border-left-color: #ff0000; /* Lumicash Red */
+}
+
+
+.ussdCode {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem !important;
+  color: white !important;
+}
+
+.ussdCode span {
+  font-family: monospace;
+  background: #333;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.merchantName {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #aaa !important;
+}
+
+.merchantName strong {
+  color: white;
+}
+
+.uploadSection {
+  margin-top: 2rem;
+}
+
+.uploadSection label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+.fileInput {
+  background: #0a0a0a;
+  padding: 0.8rem;
+  border: 1px dashed #444;
+  cursor: pointer;
+}
+
+.fileInput:hover {
+  border-color: white;
+}
+
+.payButton {
+
+  width: 100%;
+  padding: 1.2rem;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.payButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.summarySection {
+  background: #111;
+  padding: 2rem;
+  height: fit-content;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

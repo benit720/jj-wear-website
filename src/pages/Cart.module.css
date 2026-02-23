@@ -1,0 +1,153 @@
+.cartPage {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.continueLink {
+  margin-top: 2rem;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+.cartContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.itemImage {
+  width: 100px;
+  height: 100px;
+  background: #111;
+}
+
+.itemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemName {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.itemPrice {
+  color: #888;
+  margin: 0;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #333;
+  padding: 0.5rem;
+}
+
+.quantityControls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.quantityControls button:disabled {
+  opacity: 0.3;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.removeButton:hover {
+  color: #ff4444;
+}
+
+.summary {
+  background: #111;
+  padding: 2rem;
+  height: fit-content;
+}
+
+.summary h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.total {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+  transition: transform 0.2s;
+}
+
+.checkoutButton:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .cartContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .item {
+    flex-wrap: wrap;
+  }
+}
