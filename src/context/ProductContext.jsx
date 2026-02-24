@@ -1,19 +1,24 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { PRODUCTS as INITIAL_PRODUCTS } from '../utils/mockData';
+import { fetchShopifyProducts } from '../utils/shopify';
 
 const ProductContext = createContext();
 
 export const useProducts = () => useContext(ProductContext);
 
 export const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState(() => {
-    const savedProducts = localStorage.getItem('products');
-    return savedProducts ? JSON.parse(savedProducts) : INITIAL_PRODUCTS;
-  });
+  const [products, setProducts] = useState(INITIAL_PRODUCTS);
 
   useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products));
-  }, [products]);
+    const loadShopifyData = async () => {
+      const shopifyData = await fetchShopifyProducts();
+      if (shopifyData) {
+        setProducts(shopifyData);
+      }
+    };
+    loadShopifyData();
+  }, []);
+
 
   const addProduct = (product) => {
     setProducts((prevProducts) => [...prevProducts, product]);

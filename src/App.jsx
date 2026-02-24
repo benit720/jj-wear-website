@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Collections from './pages/Collections';
@@ -15,7 +17,19 @@ import { ProductProvider } from './context/ProductContext';
 import { SalesProvider } from './context/SalesContext';
 
 function App() {
+  useEffect(() => {
+    const updateVH = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    updateVH();
+    window.addEventListener('resize', updateVH);
+    return () => window.removeEventListener('resize', updateVH);
+  }, []);
+
   return (
+
     <SalesProvider>
       <AuthProvider>
         <ProductProvider>

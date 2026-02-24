@@ -63,7 +63,12 @@ const ThreeDViewer = ({ products = [] }) => {
   if (!activeProduct) return null;
 
   return (
-    <div style={{ height: '500px', width: '100%', cursor: 'grab' }}>
+    <div style={{ 
+      height: window.innerWidth < 768 ? '400px' : '500px', 
+      width: '100%', 
+      cursor: 'grab',
+      touchAction: 'none' // Prevents page scroll when interacting with 3D model
+    }}>
       <Canvas shadows camera={{ position: [0, 0, 4], fov: 45 }}>
         <ambientLight intensity={0.8} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1.5} castShadow />
@@ -84,6 +89,7 @@ const ThreeDViewer = ({ products = [] }) => {
           autoRotate={false} 
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={Math.PI / 1.5}
+          enablePan={false} // Cleaner on mobile
         />
       </Canvas>
       <div style={{ 
@@ -99,6 +105,7 @@ const ThreeDViewer = ({ products = [] }) => {
     </div>
   );
 };
+
 
 export default ThreeDViewer;
 
